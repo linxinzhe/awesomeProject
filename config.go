@@ -1,4 +1,4 @@
-package go-codebase
+package codebase
 
 import (
 	"fmt"
