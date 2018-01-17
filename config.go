@@ -1,9 +1,6 @@
 package codebase
 
-import (
-	"fmt"
-)
-
-func HelloWorld() {
-	fmt.Println("Hello, World!")
+func HelloWorld() string {
+	hello := "Hello, World!"
+	return hello
 }
