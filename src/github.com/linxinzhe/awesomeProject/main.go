@@ -2,9 +2,20 @@ package main
 
 import (
 	"fmt"
-	"github.com/linxinzhe/stringutil"
+	"os"
+	"bufio"
 )
 
 func main() {
-	fmt.Printf(stringutil.Reverse("!oG ,olleH"))
+	counts := make(map[string]int)
+	input := bufio.NewScanner(os.Stdin)
+	for input.Scan() {
+		counts[input.Text()]++
+	}
+
+	for line, n := range counts {
+		if n > 1 {
+			fmt.Printf("%d\t%s\n", n, line)
+		}
+	}
 }
