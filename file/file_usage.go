@@ -15,3 +15,9 @@ func Exist(dir string, filename string) bool {
 
 	return !os.IsNotExist(err)
 }
+
+func Abs(path string, filename string) string {
+	var fileAbsPath, _ = filepath.Abs(filepath.Join(path, filename))
+	return fileAbsPath
+}
+
