@@ -5,13 +5,13 @@ import (
 	"runtime"
 )
 
-// get environment var
+// GetEnv gets environment var
 func GetEnv() string {
 	gopath := os.Getenv("GOPATH")
 	return gopath
 }
 
-// get your go version
+// Version gets your go version
 func Version() string {
 	version := runtime.Version()
 	return version

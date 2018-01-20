@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-// check if the file is in dir
+// Exist checks if the file is in dir
 func Exist(dir string, filename string) bool {
 	path := filepath.Join(dir, filename)
 	log.Println("Path", path)
@@ -17,7 +17,7 @@ func Exist(dir string, filename string) bool {
 	return !os.IsNotExist(err)
 }
 
-// your file absolute path
+// Abs gives you file absolute path
 func Abs(path string, filename string) string {
 	var fileAbsPath, _ = filepath.Abs(filepath.Join(path, filename))
 	return fileAbsPath

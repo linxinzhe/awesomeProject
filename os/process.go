@@ -2,7 +2,7 @@ package os
 
 import "os"
 
-// exit your program
+// Exit get your program exit
 func Exit() {
 	os.Exit(1) // 以1为错误码
 }
