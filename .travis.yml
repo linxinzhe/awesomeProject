@@ -3,4 +3,4 @@ go_import_path: github.com/linxinzhe/go-codebase
 sudo: false
 go: 1.9.x
 script:
-  - go run ci.go test
+  - go run build/ci.go test

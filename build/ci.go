@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	if _, err := os.Stat(filepath.Join(".", "ci.go")); os.IsNotExist(err) {
+	if _, err := os.Stat(filepath.Join("build", "ci.go")); os.IsNotExist(err) {
 		log.Fatal("this script must be run from the root of the repository")
 	}
 
