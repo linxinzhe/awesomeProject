@@ -37,7 +37,7 @@ func doTest(cmdline []string) {
 		packages = flag.Args()
 	}
 
-	gotest := GoTool("test", "-v")
+	gotest := GoTool("test")
 	gotest.Args = append(gotest.Args, packages...)
 	MustRun(gotest)
 }
