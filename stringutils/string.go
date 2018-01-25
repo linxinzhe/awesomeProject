@@ -20,4 +20,12 @@ func lengthOfUTF8() {
 	s := "Hello, 世界"
 	fmt.Println(len(s))                    // "13"
 	fmt.Println(utf8.RuneCountInString(s)) // "9"
+
+	n := 0
+	for i, r := range "Hello, 世界" {
+		fmt.Printf("%d\t%q\t%d\n", i, r, r)
+		n++ //实际上遇到中文就跳过了3个字节
+	}
+	fmt.Println(n)
+
 }
