@@ -4,6 +4,8 @@ import (
 	"strings"
 	"fmt"
 	"unicode/utf8"
+	"encoding/hex"
+	"log"
 )
 
 // Contains check if str is in text
@@ -28,4 +30,16 @@ func lengthOfUTF8() {
 	}
 	fmt.Println(n)
 
+}
+
+func DecodeByteHexString() {
+	src := []byte("48656c6c6f20476f7068657221")
+
+	dst := make([]byte, hex.DecodedLen(len(src)))
+	n, err := hex.Decode(dst, src) //相当于两两，如"48"合并成一个hex真数字
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(dst[:n])  //hex真数字
+	fmt.Printf("%s\n", dst[:n])
 }
