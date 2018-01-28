@@ -13,12 +13,12 @@ func Contains(text string, str string) bool {
 	return strings.Contains(text, str)
 }
 
-func stringToByte() {
+func StringToByte() {
 	a := "啊bcd" // utf-8，一个中文顶三个byte，一个英文一个byte
 	fmt.Println([]byte(a))
 }
 
-func lengthOfUTF8() {
+func LengthOfUTF8() {
 	s := "Hello, 世界"
 	fmt.Println(len(s))                    // "13"
 	fmt.Println(utf8.RuneCountInString(s)) // "9"
@@ -42,4 +42,11 @@ func DecodeByteHexString() {
 	}
 	fmt.Println(dst[:n])  //hex真数字
 	fmt.Printf("%s\n", dst[:n])
+}
+
+func StringsJoin(){
+	a:=[]string{"1","b","c","d"}
+	result:=strings.Join(a," ") //本质是用byte数组的copy来提高效率
+	fmt.Println(result)
+
 }
