@@ -8,7 +8,7 @@ import (
 )
 
 func HttpGet() {
-	url := ""
+	url := "http://httpbin.org/"
 	resp, err := http.Get(url)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "fetch:%v\n", err)
