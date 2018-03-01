@@ -15,4 +15,9 @@ func Flag() {
 	if !*n {
 		fmt.Println()
 	}
+
+	if flag.NArg() < 2 {
+		flag.Usage()
+		return
+	}
 }
