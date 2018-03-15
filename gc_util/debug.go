@@ -1,4 +1,4 @@
-package util
+package gc_util
 
 import (
 	"fmt"

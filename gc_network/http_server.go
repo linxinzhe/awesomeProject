@@ -1,4 +1,4 @@
-package network
+package gc_network
 
 import (
 	"net/http"

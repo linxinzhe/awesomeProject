@@ -1,4 +1,4 @@
-package file
+package gc_file
 
 import (
 	"os"

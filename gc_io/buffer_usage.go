@@ -1,4 +1,4 @@
-package io
+package gc_io
 
 import (
 	"bufio"

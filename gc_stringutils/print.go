@@ -1,4 +1,4 @@
-package stringutils
+package gc_stringutils
 
 import "fmt"
 

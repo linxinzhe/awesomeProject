@@ -1,4 +1,4 @@
-package unittest
+package gc_unittest
 
 import "unicode"
 

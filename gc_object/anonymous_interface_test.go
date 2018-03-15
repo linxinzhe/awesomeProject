@@ -1,4 +1,4 @@
-package object
+package gc_object
 
 import (
 	"fmt"

@@ -14,24 +14,25 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
-package file
+package gc_file
 
 import (
-	"fmt"
+	"testing"
 )
 
-type StorageSize float64
-
-func (self StorageSize) String() string {
-	if self > 1000000 {
-		return fmt.Sprintf("%.2f mB", self/1000000)
-	} else if self > 1000 {
-		return fmt.Sprintf("%.2f kB", self/1000)
-	} else {
-		return fmt.Sprintf("%.2f B", self)
+func TestStorageSizeString(t *testing.T) {
+	tests := []struct {
+		size StorageSize
+		str  string
+	}{
+		{2381273, "2.38 mB"},
+		{2192, "2.19 kB"},
+		{12, "12.00 B"},
 	}
-}
 
-func (self StorageSize) Int64() int64 {
-	return int64(self)
+	for _, test := range tests {
+		if test.size.String() != test.str {
+			t.Errorf("%f: got %q, want %q", float64(test.size), test.size.String(), test.str)
+		}
+	}
 }

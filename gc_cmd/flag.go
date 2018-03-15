@@ -1,4 +1,4 @@
-package cmd
+package gc_cmd
 
 import (
 	"flag"
